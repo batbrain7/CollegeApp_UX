@@ -10,4 +10,10 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="sd_dtu.hollerandroid.LoginActivity">
 
+    <android.support.v4.view.ViewPager
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/pager"
+        >
+    </android.support.v4.view.ViewPager>
 </RelativeLayout>

@@ -1,3 +1,35 @@
 <resources>
     <string name="app_name">HollerAndroid</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string-array name="Universities">
+        <item>University</item>
+        <item>Delhi Technological University(DTU)</item>
+        <item>Netaji Subhash Institute of Technology(NSIT)</item>
+        <item>Indian Institute od Technology,Delhi(IITD)</item>
+        <item>Maharaja Agarsen Institute of Technology(MAIT)</item>
+        <item>Bhagwan Parshuram Instutute of Technology(BPIT)</item>
+        <item>Vivekanand Institute of Professsional Studies(VIPS)</item>
+        <item>jims</item>
+    </string-array>
+    <string-array name="Branch">
+        <item>Branch</item>
+        <item>Computer Engineering(COE)</item>
+        <item>ECE</item>
+        <item>EE</item>
+        <item>EEE</item>
+        <item>CE</item>
+        <item>ETC.</item>
+    </string-array>
+    <string-array name="Year">
+        <item>Year</item>
+        <item>2012</item>
+        <item>2013</item>
+        <item>2014</item>
+        <item>2015</item>
+        <item>2016</item>
+        <item>2017</item>
+        <item>2018</item>
+    </string-array>
 </resources>
