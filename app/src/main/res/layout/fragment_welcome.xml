@@ -27,7 +27,7 @@
             android:fontFamily="sans-serif"
             />
         <RelativeLayout
-            android:layout_width="300dp"
+            android:layout_width="match_parent"
             android:layout_height="40dp"
             android:layout_gravity="center"
             android:layout_marginTop="40dp"
@@ -41,7 +41,7 @@
                 ></Spinner>
         </RelativeLayout>
         <RelativeLayout
-            android:layout_width="300dp"
+            android:layout_width="match_parent"
             android:layout_height="40dp"
             android:layout_marginTop="30dp"
             android:layout_gravity="center"
@@ -56,7 +56,7 @@
                 ></Spinner>
         </RelativeLayout>
         <RelativeLayout
-            android:layout_width="300dp"
+            android:layout_width="match_parent"
             android:layout_height="40dp"
             android:layout_marginTop="30dp"
             android:layout_gravity="center"
@@ -69,5 +69,12 @@
                 android:id="@+id/year"
                 ></Spinner>
         </RelativeLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Swipe left to continue"
+            android:gravity="center"
+            android:layout_marginTop="70dp"
+            />
     </LinearLayout>
 </FrameLayout>

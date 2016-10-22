@@ -1,11 +1,13 @@
 package sd_dtu.hollerandroid;
 
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
 
 
 /**
@@ -22,6 +24,8 @@ public class PersonalDetailsFragment extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+
+    EditText studentid,password,conpassword,phoneno;
 
 
     public PersonalDetailsFragment() {
@@ -59,7 +63,37 @@ public class PersonalDetailsFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_personal_details, container, false);
+        View v =  inflater.inflate(R.layout.fragment_personal_details, container, false);
+        studentid = (EditText) v.findViewById(R.id.student_id);
+        password = (EditText) v.findViewById(R.id.password);
+        conpassword = (EditText) v.findViewById(R.id.confirmed_password);
+        phoneno = (EditText) v.findViewById(R.id.phone_no);
+        studentid.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                studentid.setBackgroundColor(Color.parseColor("#fff"));
+            }
+        });
+
+        password.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                password.setBackgroundColor(Color.parseColor("#fff"));
+            }
+        });
+        conpassword.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                conpassword.setBackgroundColor(Color.parseColor("#fff"));
+            }
+        });
+        phoneno.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                phoneno.setBackgroundColor(Color.parseColor("#fff"));
+            }
+        });
+        return v;
     }
 
 }

@@ -5,5 +5,88 @@
     android:padding="30dp"
     tools:context="sd_dtu.hollerandroid.PersonalDetailsFragment">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="40dp"
+        android:text="Personal Details"
+        android:gravity="center"
+        android:layout_gravity="center_horizontal"
+        android:textColor="#702898"
+        android:fontFamily="sans-serif"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Don't worry, we'll keep them confidential"
+        android:gravity="center"
+        android:layout_gravity="center_horizontal"
+        />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:background="#F6F3EE"
+            android:paddingLeft="20dp"
+            >
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Student ID"
+                android:id="@+id/student_id"
+                android:fontFamily="sans-serif"
+                />
+        </RelativeLayout>
 
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="#F6F3EE"
+            android:paddingLeft="20dp"
+            >
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Password"
+                android:id="@+id/password"
+                android:fontFamily="sans-serif"
+                />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="#F6F3EE"
+            android:paddingLeft="20dp"
+            >
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Confirm your password"
+                android:id="@+id/confirmed_password"
+                android:fontFamily="sans-serif"
+                />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="#F6F3EE"
+            android:paddingLeft="20dp"
+            >
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Phone no. for verification"
+                android:fontFamily="sans-serif"
+                android:id="@+id/phone_no"
+                />
+        </RelativeLayout>
+    </LinearLayout>
 </FrameLayout>
