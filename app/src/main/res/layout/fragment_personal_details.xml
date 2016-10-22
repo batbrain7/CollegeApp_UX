@@ -17,7 +17,7 @@
         android:text="Personal Details"
         android:gravity="center"
         android:layout_gravity="center_horizontal"
-        android:textColor="#702898"
+        android:textColor="#3b0393"
         android:fontFamily="sans-serif"
         />
     <TextView
@@ -32,12 +32,15 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
             android:background="#F6F3EE"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
             android:paddingLeft="20dp"
             >
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Student ID"
+                android:background="#00000000"
                 android:id="@+id/student_id"
                 android:fontFamily="sans-serif"
                 />
@@ -49,12 +52,15 @@
             android:layout_marginTop="20dp"
             android:background="#F6F3EE"
             android:paddingLeft="20dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
             >
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Password"
                 android:id="@+id/password"
+                android:background="#00000000"
                 android:fontFamily="sans-serif"
                 />
         </RelativeLayout>
@@ -64,11 +70,14 @@
             android:layout_marginTop="20dp"
             android:background="#F6F3EE"
             android:paddingLeft="20dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
             >
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Confirm your password"
+                android:background="#00000000"
                 android:id="@+id/confirmed_password"
                 android:fontFamily="sans-serif"
                 />
@@ -79,12 +88,15 @@
             android:layout_marginTop="20dp"
             android:background="#F6F3EE"
             android:paddingLeft="20dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
             >
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Phone no. for verification"
                 android:fontFamily="sans-serif"
+                android:background="#00000000"
                 android:id="@+id/phone_no"
                 />
         </RelativeLayout>

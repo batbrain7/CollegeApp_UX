@@ -16,7 +16,7 @@
             android:text="Welcome"
             android:gravity="center"
             android:textSize="50dp"
-            android:textColor="#702898"
+            android:textColor="#3b0393"
             android:fontFamily="sans-serif"
             />
         <TextView

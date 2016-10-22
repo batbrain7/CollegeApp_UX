@@ -6,7 +6,41 @@
 
    <LinearLayout
        android:layout_width="match_parent"
-       android:layout_height="match_parent">
+       android:layout_height="match_parent"
+       android:orientation="vertical"
+       >
+       <TextView
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:text="Interests"
+           android:gravity="center"
+           android:padding="10dp"
+           android:textSize="50dp"
+           android:textColor="#3b0393"
+           />
+       <TextView
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:text="What kind sof events do you like"
+           android:gravity="center"
+           />
+       <ListView
+           android:layout_width="match_parent"
+           android:layout_height="300dp"
+           android:id="@+id/list_items"
+           android:choiceMode="multipleChoice"
+           ></ListView>
+        <Button
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/shape_button"
+            android:text="Submit"
+            android:textColor="#fff"
+            android:fontFamily="sans-serif"
+            android:id="@+id/submit_button"
+            />
    </LinearLayout>
 
 </FrameLayout>

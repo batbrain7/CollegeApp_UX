@@ -2,10 +2,13 @@ package sd_dtu.hollerandroid;
 
 
 import android.os.Bundle;
+import android.os.StrictMode;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -22,20 +25,14 @@ public class InterestsFragment extends Fragment {
     private String mParam1;
     private String mParam2;
 
+    ListView listView;
+
+    String[] interests;
 
     public InterestsFragment() {
         // Required empty public constructor
     }
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment InterestsFragment.
-     */
-    // TODO: Rename and change types and number of parameters
     public static InterestsFragment newInstance(String param1, String param2) {
         InterestsFragment fragment = new InterestsFragment();
         Bundle args = new Bundle();
@@ -58,7 +55,11 @@ public class InterestsFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_interests, container, false);
+        View v = inflater.inflate(R.layout.fragment_interests, container, false);
+        listView = (ListView)v.findViewById(R.id.list_items);
+        interests = getResources().getStringArray(R.array.interests);
+        listView.setAdapter(new ArrayAdapter<String>(getActivity(),android.R.layout.simple_list_item_multiple_choice,interests));
+        return v;
     }
 
 }
