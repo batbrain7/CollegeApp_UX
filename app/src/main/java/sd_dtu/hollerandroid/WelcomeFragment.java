@@ -2,8 +2,11 @@ package sd_dtu.hollerandroid;
 
 
 import android.content.Context;
+import android.content.res.AssetManager;
 import android.graphics.Color;
+import android.graphics.Typeface;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -28,7 +31,7 @@ public class WelcomeFragment extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
-    Context context;
+    TextView textView,textView1,textView2;
     String[] univs = {"University","Delhi Technological University(DTU)", "Netaji Subhash Institute of Technology(NSIT)","Indian Institute od Technology,Delhi(IITD)"
     ,"Maharaja Agarsen Institute of Technology(MAIT)","Bhagwan Parshuram Instutute of Technology(BPIT)","Vivekanand Institute of Professsional Studies(VIPS)",
     "jims"};
@@ -60,7 +63,24 @@ public class WelcomeFragment extends Fragment {
         View v =  inflater.inflate(R.layout.fragment_welcome, container, false);
         //
         spinner = (Spinner)v.findViewById(R.id.university);
+        textView = (TextView)v.findViewById(R.id.welcome);
+        textView1 = (TextView) v.findViewById(R.id.enter_textview);
+        textView2 = (TextView)v.findViewById(R.id.swipe_text);
+        Typeface custom_font = Typeface.createFromAsset(getActivity().getAssets(),  "fonts/OpenSans-Regular.ttf");
+        textView.setTypeface(custom_font);
+        textView1.setTypeface(custom_font);
+        textView2.setTypeface(custom_font);
         arrayAdapter = new ArrayAdapter<String>(getActivity().getApplicationContext(),R.layout.spinner_item,univs){
+            @NonNull
+            @Override
+            public View getView(int position, View convertView, ViewGroup parent) {
+                View v = super.getView(position, convertView, parent);
+                Typeface externalFont=Typeface.createFromAsset(getActivity().getAssets(), "fonts/OpenSans-Light.ttf");
+                ((TextView) v).setTypeface(externalFont);
+
+                return v;
+            }
+
             @Override
             public boolean isEnabled(int position) {
                 if(position == 0)
@@ -72,7 +92,6 @@ public class WelcomeFragment extends Fragment {
                     return true;
                 }
             }
-
             @Override
             public View getDropDownView(int position, View convertView, ViewGroup parent) {
                 View v = super.getDropDownView(position, convertView, parent);
@@ -84,6 +103,9 @@ public class WelcomeFragment extends Fragment {
                 else {
                     tv.setTextColor(Color.BLACK);
                 }
+                Typeface externalFont=Typeface.createFromAsset(getActivity().getAssets(), "fonts/OpenSans-Light.ttf");
+                ((TextView) v).setTypeface(externalFont);
+
                 return v;
             }
         };
@@ -104,6 +126,16 @@ public class WelcomeFragment extends Fragment {
                 }
             }
 
+            @NonNull
+            @Override
+            public View getView(int position, View convertView, ViewGroup parent) {
+                View v = super.getView(position, convertView, parent);
+                Typeface externalFont=Typeface.createFromAsset(getActivity().getAssets(), "fonts/OpenSans-Light.ttf");
+                ((TextView) v).setTypeface(externalFont);
+
+                return v;
+            }
+
             @Override
             public View getDropDownView(int position, View convertView, ViewGroup parent) {
                 View v = super.getDropDownView(position, convertView, parent);
@@ -115,6 +147,8 @@ public class WelcomeFragment extends Fragment {
                 else {
                     tv.setTextColor(Color.BLACK);
                 }
+                Typeface externalFont=Typeface.createFromAsset(getActivity().getAssets(), "fonts/OpenSans-Light.ttf");
+                ((TextView) v).setTypeface(externalFont);
                 return v;
             }
         };
@@ -135,6 +169,16 @@ public class WelcomeFragment extends Fragment {
                 }
             }
 
+            @NonNull
+            @Override
+            public View getView(int position, View convertView, ViewGroup parent) {
+                View v = super.getView(position, convertView, parent);
+                Typeface externalFont=Typeface.createFromAsset(getActivity().getAssets(), "fonts/OpenSans-Light.ttf");
+                ((TextView) v).setTypeface(externalFont);
+
+                return v;
+            }
+
             @Override
             public View getDropDownView(int position, View convertView, ViewGroup parent) {
                 View v = super.getDropDownView(position, convertView, parent);
@@ -146,6 +190,8 @@ public class WelcomeFragment extends Fragment {
                 else {
                     tv.setTextColor(Color.BLACK);
                 }
+                Typeface externalFont=Typeface.createFromAsset(getActivity().getAssets(), "fonts/OpenSans-Light.ttf");
+                ((TextView) v).setTypeface(externalFont);
                 return v;
             }
         };

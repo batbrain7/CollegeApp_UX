@@ -8,7 +8,6 @@ import android.os.Bundle;
 import android.widget.TabWidget;
 import android.widget.TableLayout;
 
-import me.relex.circleindicator.CircleIndicator;
 
 
 public class LoginActivity extends AppCompatActivity {

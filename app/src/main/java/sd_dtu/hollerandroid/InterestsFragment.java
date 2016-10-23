@@ -1,6 +1,7 @@
 package sd_dtu.hollerandroid;
 
 
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.os.StrictMode;
 import android.support.v4.app.Fragment;
@@ -8,7 +9,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ListView;
+import android.widget.TextView;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -26,7 +29,7 @@ public class InterestsFragment extends Fragment {
     private String mParam2;
 
     ListView listView;
-
+    TextView textView1,textView2;
     String[] interests;
 
     public InterestsFragment() {
@@ -56,9 +59,17 @@ public class InterestsFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View v = inflater.inflate(R.layout.fragment_interests, container, false);
+        textView1 = (TextView) v.findViewById(R.id.inter);
+        Typeface custom_font = Typeface.createFromAsset(getActivity().getAssets(),  "fonts/SourceSansPro-Regular.ttf");
+        textView1.setTypeface(custom_font);
+        textView2 = (TextView) v.findViewById(R.id.event_text);
+        textView2.setTypeface(custom_font);
         listView = (ListView)v.findViewById(R.id.list_items);
         interests = getResources().getStringArray(R.array.interests);
-        listView.setAdapter(new ArrayAdapter<String>(getActivity(),android.R.layout.simple_list_item_multiple_choice,interests));
+        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(getActivity(),android.R.layout.simple_list_item_multiple_choice,interests);
+        listView.setAdapter(arrayAdapter);
+        Button button = (Button) v.findViewById(R.id.submit_button);
+        button.setTypeface(custom_font);
         return v;
     }
 

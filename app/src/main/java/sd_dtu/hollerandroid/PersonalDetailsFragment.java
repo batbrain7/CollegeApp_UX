@@ -2,12 +2,14 @@ package sd_dtu.hollerandroid;
 
 
 import android.graphics.Color;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
+import android.widget.TextView;
 
 
 /**
@@ -26,7 +28,7 @@ public class PersonalDetailsFragment extends Fragment {
     private String mParam2;
 
     EditText studentid,password,conpassword,phoneno;
-
+    TextView textView,textView2;
 
     public PersonalDetailsFragment() {
         // Required empty public constructor
@@ -64,10 +66,21 @@ public class PersonalDetailsFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View v =  inflater.inflate(R.layout.fragment_personal_details, container, false);
+        textView = (TextView) v.findViewById(R.id.personal_text);
+        textView2 = (TextView) v.findViewById(R.id.text3);
         studentid = (EditText) v.findViewById(R.id.student_id);
         password = (EditText) v.findViewById(R.id.password);
         conpassword = (EditText) v.findViewById(R.id.confirmed_password);
         phoneno = (EditText) v.findViewById(R.id.phone_no);
+        Typeface custom_font = Typeface.createFromAsset(getActivity().getAssets(),  "fonts/DroidSans.ttf");
+        studentid.setTypeface(custom_font);
+        password.setTypeface(custom_font);
+        conpassword.setTypeface(custom_font);
+        phoneno.setTypeface(custom_font);
+        textView.setTypeface(custom_font);
+        textView2.setTypeface(custom_font);
+
+
         studentid.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

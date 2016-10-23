@@ -13,25 +13,26 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="40dp"
+        android:textSize="35dp"
         android:text="Personal Details"
         android:gravity="center"
+        android:id="@+id/personal_text"
         android:layout_gravity="center_horizontal"
         android:textColor="#3b0393"
-        android:fontFamily="sans-serif"
         />
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Don't worry, we'll keep them confidential"
         android:gravity="center"
+        android:id="@+id/text3"
         android:layout_gravity="center_horizontal"
         />
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
-            android:background="#F6F3EE"
+            android:background="#dcdfd4"
             android:paddingTop="10dp"
             android:paddingBottom="10dp"
             android:paddingLeft="20dp"
@@ -42,7 +43,6 @@
                 android:hint="Student ID"
                 android:background="#00000000"
                 android:id="@+id/student_id"
-                android:fontFamily="sans-serif"
                 />
         </RelativeLayout>
 
@@ -50,7 +50,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:background="#F6F3EE"
+            android:background="#dcdfd4"
             android:paddingLeft="20dp"
             android:paddingTop="10dp"
             android:paddingBottom="10dp"
@@ -61,14 +61,13 @@
                 android:hint="Password"
                 android:id="@+id/password"
                 android:background="#00000000"
-                android:fontFamily="sans-serif"
                 />
         </RelativeLayout>
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:background="#F6F3EE"
+            android:background="#dcdfd4"
             android:paddingLeft="20dp"
             android:paddingTop="10dp"
             android:paddingBottom="10dp"
@@ -79,14 +78,13 @@
                 android:hint="Confirm your password"
                 android:background="#00000000"
                 android:id="@+id/confirmed_password"
-                android:fontFamily="sans-serif"
                 />
         </RelativeLayout>
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:background="#F6F3EE"
+            android:background="#dcdfd4"
             android:paddingLeft="20dp"
             android:paddingTop="10dp"
             android:paddingBottom="10dp"

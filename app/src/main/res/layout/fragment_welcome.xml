@@ -16,22 +16,22 @@
             android:text="Welcome"
             android:gravity="center"
             android:textSize="50dp"
+            android:id="@+id/welcome"
             android:textColor="#3b0393"
-            android:fontFamily="sans-serif"
             />
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Enter your Academic Details"
             android:gravity="center"
-            android:fontFamily="sans-serif"
+            android:id="@+id/enter_textview"
             />
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:layout_gravity="center"
             android:layout_marginTop="40dp"
-            android:background="#F6F3EE"
+            android:background="#dcdfd4"
             >
             <Spinner
                 android:layout_width="match_parent"
@@ -45,7 +45,7 @@
             android:layout_height="40dp"
             android:layout_marginTop="30dp"
             android:layout_gravity="center"
-            android:background="#F6F3EE"
+            android:background="#dcdfd4"
 
             >
             <Spinner
@@ -60,7 +60,7 @@
             android:layout_height="40dp"
             android:layout_marginTop="30dp"
             android:layout_gravity="center"
-            android:background="#F6F3EE"
+            android:background="#dcdfd4"
             >
             <Spinner
                 android:layout_width="match_parent"
@@ -74,6 +74,7 @@
             android:layout_height="wrap_content"
             android:text="Swipe left to continue"
             android:gravity="center"
+            android:id="@+id/swipe_text"
             android:layout_marginTop="70dp"
             />
     </LinearLayout>
