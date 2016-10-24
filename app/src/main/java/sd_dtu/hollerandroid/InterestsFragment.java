@@ -1,7 +1,11 @@
 package sd_dtu.hollerandroid;
 
 
+import android.app.ProgressDialog;
+import android.content.Context;
+import android.content.Intent;
 import android.graphics.Typeface;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.StrictMode;
 import android.support.v4.app.Fragment;
@@ -28,6 +32,7 @@ public class InterestsFragment extends Fragment {
     private String mParam1;
     private String mParam2;
 
+    View v;
     ListView listView;
     TextView textView1,textView2;
     String[] interests;
@@ -58,7 +63,7 @@ public class InterestsFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View v = inflater.inflate(R.layout.fragment_interests, container, false);
+        v = inflater.inflate(R.layout.fragment_interests, container, false);
         textView1 = (TextView) v.findViewById(R.id.inter);
         Typeface custom_font = Typeface.createFromAsset(getActivity().getAssets(),  "fonts/SourceSansPro-Regular.ttf");
         textView1.setTypeface(custom_font);
@@ -70,7 +75,54 @@ public class InterestsFragment extends Fragment {
         listView.setAdapter(arrayAdapter);
         Button button = (Button) v.findViewById(R.id.submit_button);
         button.setTypeface(custom_font);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                ServerContact serverContact = new ServerContact();
+                serverContact.execute();
+            }
+        });
         return v;
+    }
+
+    class ServerContact extends AsyncTask<Void,Void,Void> {
+
+        ProgressDialog progressDialog;
+
+        @Override
+        protected Void doInBackground(Void... voids) {
+            int i=0;
+            synchronized (this) {
+
+                while (i < 7) {
+                    try {
+                        wait(1000);
+                        i++;
+                    } catch (Exception e) {
+
+                    }
+                }
+            }
+            return null;
+        }
+
+        @Override
+        protected void onPreExecute() {
+            progressDialog = new ProgressDialog(getActivity());
+            progressDialog.setTitle("Loading your Preferences....");
+            progressDialog.setMax(10);
+            progressDialog.setProgress(0);
+            progressDialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
+            progressDialog.show();
+        }
+
+        @Override
+        protected void onPostExecute(Void aVoid) {
+            // super.onPostExecute(aVoid);
+            progressDialog.hide();
+            Intent intent = new Intent(getActivity(),NoticesAndProfile.class);
+            startActivity(intent);
+        }
     }
 
 }

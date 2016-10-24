@@ -72,40 +72,14 @@ public class PersonalDetailsFragment extends Fragment {
         password = (EditText) v.findViewById(R.id.password);
         conpassword = (EditText) v.findViewById(R.id.confirmed_password);
         phoneno = (EditText) v.findViewById(R.id.phone_no);
-        Typeface custom_font = Typeface.createFromAsset(getActivity().getAssets(),  "fonts/DroidSans.ttf");
+        Typeface custom_font = Typeface.createFromAsset(getActivity().getAssets(),  "fonts/OpenSans-Light.ttf");
+        Typeface custom_font2 = Typeface.createFromAsset(getActivity().getAssets(), "fonts/SourceSansPro-Regular.ttf");
         studentid.setTypeface(custom_font);
         password.setTypeface(custom_font);
         conpassword.setTypeface(custom_font);
         phoneno.setTypeface(custom_font);
-        textView.setTypeface(custom_font);
-        textView2.setTypeface(custom_font);
-
-
-        studentid.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                studentid.setBackgroundColor(Color.parseColor("#fff"));
-            }
-        });
-
-        password.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                password.setBackgroundColor(Color.parseColor("#fff"));
-            }
-        });
-        conpassword.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                conpassword.setBackgroundColor(Color.parseColor("#fff"));
-            }
-        });
-        phoneno.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                phoneno.setBackgroundColor(Color.parseColor("#fff"));
-            }
-        });
+        textView.setTypeface(custom_font2);
+        textView2.setTypeface(custom_font2);
         return v;
     }
 

@@ -2,9 +2,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="30dp"
+    android:padding="20dp"
     tools:context="sd_dtu.hollerandroid.PersonalDetailsFragment">
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -13,7 +16,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="35dp"
+        android:textSize="40dp"
         android:text="Personal Details"
         android:gravity="center"
         android:id="@+id/personal_text"
@@ -31,7 +34,7 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="40dp"
             android:background="#dcdfd4"
             android:paddingTop="10dp"
             android:paddingBottom="10dp"
@@ -88,6 +91,7 @@
             android:paddingLeft="20dp"
             android:paddingTop="10dp"
             android:paddingBottom="10dp"
+            android:layout_marginBottom="30dp"
             >
             <EditText
                 android:layout_width="match_parent"
@@ -99,4 +103,5 @@
                 />
         </RelativeLayout>
     </LinearLayout>
+    </ScrollView>
 </FrameLayout>
