@@ -19,6 +19,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -33,6 +34,7 @@ public class NoticesAndProfile extends AppCompatActivity {
     ActionBarDrawerToggle actionBarDrawerToggle;
     NavigationView navigationView;
     NoticeViewPager viewPagerAdapter;
+    LinearLayout linearLayout1,linearLayout2,linearLayout3,linearLayout4,linearLayout5;
     RecyclerView recyclerView;
     RecyclerView.Adapter adapter;
     RecyclerView.LayoutManager layoutManager;
@@ -41,7 +43,7 @@ public class NoticesAndProfile extends AppCompatActivity {
     String[] name = {"Notices","Chats","Events"};
     String[] nums = {"5","86","3"};
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(final Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_notices_and_profile);
         toolbar = (Toolbar)findViewById(R.id.toolbar_wid);
@@ -69,24 +71,52 @@ public class NoticesAndProfile extends AppCompatActivity {
         DrawerLayout.LayoutParams params = (DrawerLayout.LayoutParams) navigationView.getLayoutParams();
         params.width = metrics.widthPixels;
         navigationView.setLayoutParams(params);
-        //  ImageView iconImage = (ImageView) findViewById(android.R.id.home);
-//        iconImage.setOnClickListener(new android.view.View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//            }
-//        });
-
+        linearLayout1 = (LinearLayout) navigationView.findViewById(R.id.notice_open);
+        linearLayout2 = (LinearLayout) navigationView.findViewById(R.id.chats_open);
+        linearLayout3 = (LinearLayout) navigationView.findViewById(R.id.events_open);
+        linearLayout4= (LinearLayout) navigationView.findViewById(R.id.settings_open);
+        linearLayout5 = (LinearLayout) navigationView.findViewById(R.id.suggesttions_open);
+        linearLayout1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(NoticesAndProfile.this,NoticesAndProfile.class);
+                startActivity(intent);
+            }
+        });
+        linearLayout2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(NoticesAndProfile.this,ChatBox.class);
+                startActivity(intent);
+            }
+        });
+        linearLayout3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(NoticesAndProfile.this,Events.class);
+                startActivity(intent);
+            }
+        });
+        linearLayout4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(NoticesAndProfile.this,Settings.class);
+                startActivity(intent);
+            }
+        });
+        linearLayout5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(NoticesAndProfile.this,Suggestions.class);
+                startActivity(intent);
+            }
+        });
         viewPager = (ViewPager)findViewById(R.id.noticeview_pager);
         viewPagerAdapter = new NoticeViewPager(getSupportFragmentManager());
         viewPagerAdapter.addFragments(new AllFragment(),"ALL");
         viewPagerAdapter.addFragments(new MyFragment(),"MY");
         viewPager.setAdapter(viewPagerAdapter);
         tabLayout.setupWithViewPager(viewPager);
-//        Typeface tf = Typeface.createFromAsset(getAssets(), "fonts/OpenSans-Light.ttf");
-//        for (int i = 0; i < tabLayout.getTabCount(); i++) {
-//            tv.setText(viewPagerAdapter.getPageTitle(i));
-//            tv.setTypeface(tf);
-//            tabLayout.getTabAt(i).setCustomView(tv);}
     }
 
     @Override
@@ -100,3 +130,8 @@ public class NoticesAndProfile extends AppCompatActivity {
         actionBarDrawerToggle.syncState();
     }
 }
+//        Typeface tf = Typeface.createFromAsset(getAssets(), "fonts/OpenSans-Light.ttf");
+//        for (int i = 0; i < tabLayout.getTabCount(); i++) {
+//            tv.setText(viewPagerAdapter.getPageTitle(i));
+//            tv.setTypeface(tf);
+//            tabLayout.getTabAt(i).setCustomView(tv);}

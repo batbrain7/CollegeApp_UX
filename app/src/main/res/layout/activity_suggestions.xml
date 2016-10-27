@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_suggestions"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#eaebec"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="sd_dtu.hollerandroid.Suggestions">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Help us in improving your experience"
+        android:gravity="center"
+        />
+    <EditText
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:background="#fff"
+        android:paddingTop="10dp"
+        android:paddingLeft="5dp"
+        android:hint="Enter your feedback"
+        android:gravity="top"
+        />
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/shape_button"
+        android:layout_gravity="center_horizontal"
+        android:text="submit"
+        android:textColor="#fff"
+        android:id="@+id/sub_suggest"
+        />
+    <TextView
+        android:layout_marginTop="40dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Thank You"
+        android:layout_gravity="center_horizontal"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="for your valuable suggestions!"
+        android:layout_gravity="center_horizontal"
+        />
+</LinearLayout>

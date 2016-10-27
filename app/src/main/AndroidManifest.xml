@@ -24,7 +24,23 @@
             android:name=".ProfileActivity"
             android:label="@string/title_activity_profile"
             android:theme="@style/Newtheme" />
-        <activity android:name=".Events"></activity>
+        <activity
+            android:name=".Events"
+            android:label="Events"
+            android:parentActivityName=".NoticesAndProfile"
+            android:theme="@style/Newtheme1" />
+        <activity
+            android:name=".ChatBox"
+            android:label="Chats"
+            android:parentActivityName=".NoticesAndProfile" />
+        <activity android:name=".Settings"
+                android:label="Settings"
+                android:theme="@style/Newtheme1"
+            />
+        <activity android:name=".Suggestions"
+            android:label="Suggestions"
+            android:theme="@style/Newtheme1"
+            ></activity>
     </application>
 
 </manifest>

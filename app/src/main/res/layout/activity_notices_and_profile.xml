@@ -140,7 +140,7 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/events_txt"
                     android:layout_weight="1"
-                    android:text="Chats"
+                    android:text="Events"
                     android:layout_marginLeft="20dp"
                     />
                 <TextView

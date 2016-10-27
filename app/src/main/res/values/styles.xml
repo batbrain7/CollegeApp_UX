@@ -23,6 +23,12 @@
         <item name="colorAccent">@color/colornotices</item>
     </style>
 
+    <style name="Newtheme1" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/colornotices</item>
+        <item name="colorPrimaryDark">@color/colornoticesdark</item>
+        <item name="colorAccent">@color/colornotices</item>
+    </style>
+
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
