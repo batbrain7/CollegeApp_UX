@@ -8,6 +8,8 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuInflater;
 
+import me.anwarshahriar.calligrapher.Calligrapher;
+
 public class Events extends AppCompatActivity {
 
     TabLayout tabLayout;
@@ -19,6 +21,8 @@ public class Events extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_events);
+        Calligrapher calligrapher = new Calligrapher(this);
+        calligrapher.setFont(this, "fonts/OpenSans-Regular.ttf", true);
         tabLayout = (TabLayout)findViewById(R.id.tab1_layout);
         viewPager = (ViewPager)findViewById(R.id.event_pager);
         viewPagerAdapter = new NoticeViewPager(getSupportFragmentManager());

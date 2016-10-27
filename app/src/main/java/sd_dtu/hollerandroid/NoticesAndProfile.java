@@ -25,6 +25,8 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 
+import me.anwarshahriar.calligrapher.Calligrapher;
+
 public class NoticesAndProfile extends AppCompatActivity {
 
     TabLayout tabLayout;
@@ -47,6 +49,8 @@ public class NoticesAndProfile extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_notices_and_profile);
         toolbar = (Toolbar)findViewById(R.id.toolbar_wid);
+        Calligrapher calligrapher = new Calligrapher(this);
+        calligrapher.setFont(this, "fonts/OpenSans-Regular.ttf", true);
         tabLayout = (TabLayout)findViewById(R.id.tab_layout);
         setSupportActionBar(toolbar);
 //        int count = 0;

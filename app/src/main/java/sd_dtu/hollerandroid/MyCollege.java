@@ -30,6 +30,7 @@ public class MyCollege extends Fragment {
     String[] date = {"29 October 2016","30 October 2016"};
     String[] time = {"9:41 am","10:41 am"};
     String[] venues = {"mait bla bla bla bla","bla dtu bla bla"};
+    String[] univs = {"Delhi Technological University", "Delhi Technological University"};
     ArrayList<EventData> arrayList = new ArrayList<EventData>();
 
     public MyCollege() {
@@ -62,7 +63,7 @@ public class MyCollege extends Fragment {
         int i = 0;
         for(String n : events)
         {
-            EventData eventData = new EventData(image_src[i],events[i],venues[i],organs[i],date[i],time[i]);
+            EventData eventData = new EventData(image_src[i],univs[i],events[i],venues[i],organs[i],date[i],time[i]);
             arrayList.add(eventData);
             i++;
         }

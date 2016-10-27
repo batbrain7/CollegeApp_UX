@@ -34,6 +34,7 @@ public class AllCollege extends Fragment {
     String[] date = {"29 October 2016","30 October 2016","5 November 2016","8 November 2016"};
     String[] time = {"9:41 am","10:41 am","11:41 am","12:41 am"};
     String[] venues = {"mait bla bla bla bla","bla bla bla bla bla","bla dtu bla bla","nsit bla bla bla bla bla"};
+    String[] univs = {"Delhi Technological University", "Netaji Subhash Institute of Technology","Maharaja Agarsen Institute of Technology(MAIT)","Bhagwan Parshuram Instutute of Technology(BPIT)"};
 
     public AllCollege() {
         // Required empty public constructor
@@ -64,7 +65,7 @@ public class AllCollege extends Fragment {
         int i = 0;
         for(String n : events)
         {
-            EventData eventData = new EventData(image_src[i],n,venues[i],organs[i],date[i],time[i]);
+            EventData eventData = new EventData(image_src[i],univs[i],n,venues[i],organs[i],date[i],time[i]);
             arrayList.add(eventData);
             i++;
         }

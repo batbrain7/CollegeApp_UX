@@ -8,6 +8,7 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <uses-permission android:name="android.permission.INTERNET"></uses-permission>
         <activity android:name=".SplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -21,10 +22,6 @@
             android:label="Notices"
             android:theme="@style/Newtheme" />
         <activity
-            android:name=".ProfileActivity"
-            android:label="@string/title_activity_profile"
-            android:theme="@style/Newtheme" />
-        <activity
             android:name=".Events"
             android:label="Events"
             android:parentActivityName=".NoticesAndProfile"
@@ -33,13 +30,23 @@
             android:name=".ChatBox"
             android:label="Chats"
             android:parentActivityName=".NoticesAndProfile" />
-        <activity android:name=".Settings"
-                android:label="Settings"
-                android:theme="@style/Newtheme1"
-            />
-        <activity android:name=".Suggestions"
+        <activity
+            android:name=".Settings"
+            android:label="Settings"
+            android:theme="@style/Newtheme1" />
+        <activity
+            android:name=".Suggestions"
             android:label="Suggestions"
+            android:theme="@style/Newtheme1" />
+        <activity android:name=".Personalisation"
+            android:parentActivityName=".Settings"
             android:theme="@style/Newtheme1"
+            android:label="Personalisation"
+            />
+        <activity android:name=".FullDetails"
+            android:label="Event Details"
+            android:theme="@style/Newtheme1"
+            android:parentActivityName=".Events"
             ></activity>
     </application>
 

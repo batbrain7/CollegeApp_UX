@@ -1,6 +1,7 @@
 package sd_dtu.hollerandroid;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Typeface;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.FragmentActivity;
@@ -44,11 +45,13 @@ public class EventRecyclerAdapter extends RecyclerView.Adapter<EventRecyclerAdap
         holder.textView3.setTypeface(tf);
         holder.textView4.setTypeface(tf);
         holder.textView5.setTypeface(tf);
+        holder.textView6.setTypeface(tf);
         holder.textView1.setText(eventData.getEventname());
         holder.textView2.setText(eventData.getOrganisation());
         holder.textView3.setText(eventData.getDate());
         holder.textView4.setText(eventData.getTime());
         holder.textView5.setText(eventData.getVenue());
+        holder.textView6.setText(eventData.getCollegename());
         holder.imageView.setImageResource(eventData.getImage_src());
     }
 
@@ -59,7 +62,7 @@ public class EventRecyclerAdapter extends RecyclerView.Adapter<EventRecyclerAdap
 
     public static class EventRecyclerViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
 
-        TextView textView1,textView2,textView3,textView4,textView5;
+        TextView textView1,textView2,textView3,textView4,textView5,textView6;
         ImageView imageView;
         Context context;
         FloatingActionButton floatingActionButton;
@@ -75,6 +78,7 @@ public class EventRecyclerAdapter extends RecyclerView.Adapter<EventRecyclerAdap
             textView3 = (TextView) itemView.findViewById(R.id.date);
             textView4 = (TextView) itemView.findViewById(R.id.time1);
             textView5 = (TextView) itemView.findViewById(R.id.venue);
+            textView6 = (TextView) itemView.findViewById(R.id.title_colg);
             floatingActionButton = (FloatingActionButton) itemView.findViewById(R.id.star_button);
             floatingActionButton.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -86,7 +90,31 @@ public class EventRecyclerAdapter extends RecyclerView.Adapter<EventRecyclerAdap
 
         @Override
         public void onClick(View view) {
+            int position  = getAdapterPosition();
+            EventData eventData = this.data.get(position);
 
+            if(textView1.getText().toString().equals("Nuclear Conference"))
+            {
+                Intent intent = new Intent(this.context,FullDetails.class);
+                intent.putExtra("item","nuclear conference");
+                context.startActivity(intent);
+            }
+            if(textView1.getText().toString().equals("Startup Fair"))
+            {
+                Intent intent = new Intent(this.context,FullDetails.class);
+                intent.putExtra("item","startup");
+                context.startActivity(intent);
+            }if(textView1.getText().toString().equals("Ecell Fair"))
+            {
+                Intent intent = new Intent(this.context,FullDetails.class);
+                intent.putExtra("item","Ecellfair");
+                context.startActivity(intent);
+            }if(textView1.getText().toString().equals("Tech. Week"))
+            {
+                Intent intent = new Intent(this.context,FullDetails.class);
+                intent.putExtra("item","techweek");
+                context.startActivity(intent);
+            }
         }
     }
 }

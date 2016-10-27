@@ -7,16 +7,21 @@ package sd_dtu.hollerandroid;
 public class EventData {
 
     int image_src;
-    String Eventname,Venue,Organisation,Date,Time;
+    String Collegename,Eventname,Venue,Organisation,Date,Time;
 
-    public EventData(int image_src,String Eventname,String Venue,String Organisation,String Date,String Time)
+    public EventData(int image_src,String Collegename,String Eventname,String Venue,String Organisation,String Date,String Time)
     {
+        this.setCollegename(Collegename);
         this.setImage_src(image_src);
         this.setDate(Date);
         this.setEventname(Eventname);
         this.setTime(Time);
         this.setOrganisation(Organisation);
         this.setVenue(Venue);
+    }
+
+    public String getCollegename() {
+        return Collegename;
     }
 
     public int getImage_src() {
@@ -41,6 +46,10 @@ public class EventData {
 
     public String getVenue() {
         return Venue;
+    }
+
+    public void setCollegename(String collegename) {
+        Collegename = collegename;
     }
 
     public void setDate(String date) {
