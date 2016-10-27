@@ -96,7 +96,7 @@ public class InterestsFragment extends Fragment {
 
                 while (i < 7) {
                     try {
-                        wait(1000);
+                        wait(10);
                         i++;
                     } catch (Exception e) {
 

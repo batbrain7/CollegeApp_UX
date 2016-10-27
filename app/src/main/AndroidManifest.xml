@@ -16,10 +16,15 @@
             </intent-filter>
         </activity>
         <activity android:name=".LoginActivity" />
-        <activity android:name=".NoticesAndProfile"
+        <activity
+            android:name=".NoticesAndProfile"
             android:label="Notices"
-            android:theme="@style/Newtheme"
-            ></activity>
+            android:theme="@style/Newtheme" />
+        <activity
+            android:name=".ProfileActivity"
+            android:label="@string/title_activity_profile"
+            android:theme="@style/Newtheme" />
+        <activity android:name=".Events"></activity>
     </application>
 
 </manifest>

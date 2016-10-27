@@ -1,6 +1,8 @@
 package sd_dtu.hollerandroid;
 
 import android.content.Context;
+import android.graphics.Color;
+import android.graphics.Typeface;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -32,6 +34,9 @@ public class NoticeRecyclerAdapter extends RecyclerView.Adapter<NoticeRecyclerAd
     @Override
     public void onBindViewHolder(EventViewHolder holder, int position) {
         RecyclerData datac = data.get(position);
+        Typeface tf = Typeface.createFromAsset(context.getAssets(),"fonts/OpenSans-Light.ttf");
+        holder.textView1.setTypeface(tf);
+        holder.textView2.setTypeface(tf);
         holder.textView1.setText(datac.getEvent());
         holder.textView2.setText(datac.getUpdate());
     }
