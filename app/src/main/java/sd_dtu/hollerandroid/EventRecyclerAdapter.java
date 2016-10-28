@@ -2,6 +2,7 @@ package sd_dtu.hollerandroid;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
 import android.graphics.Typeface;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.FragmentActivity;
@@ -11,6 +12,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -62,12 +64,13 @@ public class EventRecyclerAdapter extends RecyclerView.Adapter<EventRecyclerAdap
 
     public static class EventRecyclerViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
 
+        public static boolean fun  = false;
         TextView textView1,textView2,textView3,textView4,textView5,textView6;
         ImageView imageView;
         Context context;
         FloatingActionButton floatingActionButton;
         ArrayList<EventData> data = new ArrayList<EventData>();
-        public EventRecyclerViewHolder(View itemView,Context context,ArrayList<EventData> data) {
+        public EventRecyclerViewHolder(View itemView, final Context context, ArrayList<EventData> data) {
             super(itemView);
             this.data = data;
             this.context  = context;
@@ -83,7 +86,19 @@ public class EventRecyclerAdapter extends RecyclerView.Adapter<EventRecyclerAdap
             floatingActionButton.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    
+
+
+                    if(fun)
+                    {
+                        floatingActionButton.setImageResource(R.drawable.starborder);
+                        fun=false;
+                    }
+                    else
+                    {
+                        fun=true;
+                        floatingActionButton.setImageResource(R.drawable.star);
+                        Toast.makeText(context, "Starred", Toast.LENGTH_LONG).show();
+                    }
                 }
             });
         }

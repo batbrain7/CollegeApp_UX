@@ -5,7 +5,7 @@
     <item
         android:title="Star"
         app:showAsAction="always"
-        android:icon="@drawable/star"
+        android:icon="@drawable/starborder"
         android:id="@+id/starit"
         ></item>
     <item

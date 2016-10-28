@@ -200,6 +200,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
+                android:textSize="10dp"
                 android:text="Contact the organisers"
                 />
             <RelativeLayout
@@ -220,8 +221,17 @@
                     android:text="Name of the head"
                     android:layout_toRightOf="@+id/call"
                     android:gravity="center"
+                    android:textColor="#000"
                     android:layout_marginLeft="30dp"
                     android:id="@+id/namehead"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="HEAD"
+                    android:layout_below="@+id/namehead"
+                    android:layout_toRightOf="@id/call"
+                    android:layout_marginLeft="30dp"
                     />
                 <TextView
                     android:layout_width="wrap_content"
